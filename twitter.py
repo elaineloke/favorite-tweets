@@ -1,8 +1,8 @@
 import tweepy
 import time 
 
-auth = tweepy.OAuthHandler('4THPjvTQau3r3DizFKllxFt9L', 's1l7E1OW47SWDpl7utEyiXkSoAdtZYlG166WPCB901tZTX0df0')
-auth.set_access_token('1487423447504498688-yj6SfMZtWaLgAOCy65swxTxE4m88T7', 'cnVQz7OpzkVyusglH78sPm7uUtGKnbG2UD8mV55gcwEJ9')
+auth = tweepy.OAuthHandler #removed for safeguarding
+auth.set_access_token #removed for safeguarding
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
@@ -16,7 +16,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 # for friend in user.friends():
 #     print(friend.screen_name)
 
-search = 'Shawn Mendes'
+search = '#insert search keywords here'
 nrTweets = 10
 
 for tweet in tweepy.Cursor(api.search_tweets, search).items(nrTweets):
